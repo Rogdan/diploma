@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TraG</string>
+    
+    //Main menu
+    <string name="tasks">Задачи</string>
+    <string name="peoples">Люди</string>
+    <string name="map">Карта</string>
+    <string name="account">Профиль</string>
 </resources>
