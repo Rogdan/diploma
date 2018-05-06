@@ -14,6 +14,8 @@ import butterknife.Unbinder;
 
 public abstract class BaseFragment extends Fragment {
     private Unbinder unbinder;
+    protected abstract void providePresenter();
+    protected abstract void unbindPresenter();
 
     @LayoutRes
     protected abstract int getLayoutId();
@@ -35,11 +37,18 @@ public abstract class BaseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
         initView();
+        providePresenter();
     }
 
     @Override
     public void onDestroyView() {
         unbinder.unbind();
+        unbindPresenter();
         super.onDestroyView();
+    }
+
+    public boolean isActive() {
+        return getActivity() != null && isAdded() && !isDetached()
+                && getView() != null && !isRemoving();
     }
 }

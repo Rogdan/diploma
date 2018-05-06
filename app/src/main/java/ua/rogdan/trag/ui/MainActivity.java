@@ -1,5 +1,7 @@
 package ua.rogdan.trag.ui;
 
+import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
@@ -12,6 +14,7 @@ import butterknife.BindView;
 import ua.rogdan.trag.R;
 import ua.rogdan.trag.core.BaseActivity;
 import ua.rogdan.trag.core.BaseFragment;
+import ua.rogdan.trag.ui.map.RoadBuilderFragment;
 
 public class MainActivity extends BaseActivity {
     @BindView(R.id.bottom_navigation)
@@ -49,7 +52,7 @@ public class MainActivity extends BaseActivity {
 
                             break;
                         case POSITION_MAP:
-
+                            fragment = new RoadBuilderFragment();
                             break;
                         case POSITION_ACCOUNT:
 
@@ -57,7 +60,10 @@ public class MainActivity extends BaseActivity {
                     }
 
                     if (fragment != null) {
-
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container, fragment, CURRENT_FRAGMENT_TAG)
+                                .commit();
                     }
 
                     return true;
@@ -67,6 +73,17 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(CURRENT_FRAGMENT_TAG);
+        if(fragment != null) {
+            fragment.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    public static final String CURRENT_FRAGMENT_TAG = "current_fragment";
 
     private static final int POSITION_HUMANS = 0;
     private static final int POSITION_TASKS = 1;

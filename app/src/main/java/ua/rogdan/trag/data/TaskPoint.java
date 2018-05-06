@@ -1,11 +1,14 @@
 package ua.rogdan.trag.data;
 
+
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 
 public class TaskPoint {
     private int id;
-    private long latitude;
-    private long longitude;
+    private String latitude;
+    private String longitude;
     private String description;
     private String deadlineTime;
     private ArrayList<Goods> goodsList;
@@ -18,19 +21,19 @@ public class TaskPoint {
         this.id = id;
     }
 
-    public long getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(long latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public long getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(long longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
@@ -56,5 +59,9 @@ public class TaskPoint {
 
     public void setGoodsList(ArrayList<Goods> goodsList) {
         this.goodsList = goodsList;
+    }
+
+    public LatLng getCoordinates() {
+        return new LatLng(Double.valueOf(latitude), Double.valueOf(longitude));
     }
 }

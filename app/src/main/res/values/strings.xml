@@ -6,4 +6,6 @@
     <string name="peoples">Люди</string>
     <string name="map">Карта</string>
     <string name="account">Профиль</string>
+
+    <string name="google_maps_key">AIzaSyBgB9Pr_LI7Mowe3T8ceBXLfv7TsiguR20</string>
 </resources>

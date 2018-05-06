@@ -6,4 +6,8 @@
 
     <color name="charcoal_alpha">#96262a29</color>
     <color name="dark_mint_green">#1ac270</color>
+
+    <color name="gunmetal">#515554</color>
+    <color name="charcoal">#262a29</color>
+    <color name="white">#fff</color>
 </resources>

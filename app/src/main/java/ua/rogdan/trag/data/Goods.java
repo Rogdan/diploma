@@ -2,6 +2,7 @@ package ua.rogdan.trag.data;
 
 public class Goods {
     private int id;
+    private String name;
     private int width;
     private int height;
     private int length;
@@ -45,5 +46,13 @@ public class Goods {
 
     public void setMass(int mass) {
         this.mass = mass;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
