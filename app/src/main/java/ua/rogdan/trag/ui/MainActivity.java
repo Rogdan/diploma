@@ -6,14 +6,12 @@ import android.support.v4.content.ContextCompat;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter;
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
-
-import java.util.IllegalFormatCodePointException;
 
 import butterknife.BindView;
 import ua.rogdan.trag.R;
 import ua.rogdan.trag.core.BaseActivity;
 import ua.rogdan.trag.core.BaseFragment;
+import ua.rogdan.trag.ui.employees.EmployeesFragment;
 import ua.rogdan.trag.ui.map.RoadBuilderFragment;
 
 public class MainActivity extends BaseActivity {
@@ -41,37 +39,40 @@ public class MainActivity extends BaseActivity {
         bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override
             public boolean onTabSelected(int position, boolean wasSelected) {
-                if (!wasSelected) {
-                    BaseFragment fragment = null;
-
-                    switch (position) {
-                        case POSITION_HUMANS:
-
-                            break;
-                        case POSITION_TASKS:
-
-                            break;
-                        case POSITION_MAP:
-                            fragment = new RoadBuilderFragment();
-                            break;
-                        case POSITION_ACCOUNT:
-
-                            break;
-                    }
-
-                    if (fragment != null) {
-                        getSupportFragmentManager()
-                                .beginTransaction()
-                                .replace(R.id.fragment_container, fragment, CURRENT_FRAGMENT_TAG)
-                                .commit();
-                    }
-
-                    return true;
-                }
-
-                return false;
+                selectTab(position, wasSelected);
+                return !wasSelected;
             }
         });
+
+        selectTab(POSITION_EMPLOYEES, false);
+    }
+
+    private void selectTab(int position, boolean wasSelected) {
+        if (!wasSelected) {
+            BaseFragment fragment = null;
+
+            switch (position) {
+                case POSITION_EMPLOYEES:
+                    fragment = new EmployeesFragment();
+                    break;
+                case POSITION_TASKS:
+
+                    break;
+                case POSITION_MAP:
+                    fragment = new RoadBuilderFragment();
+                    break;
+                case POSITION_ACCOUNT:
+
+                    break;
+            }
+
+            if (fragment != null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, fragment, CURRENT_FRAGMENT_TAG)
+                        .commit();
+            }
+        }
     }
 
     @Override
@@ -85,7 +86,7 @@ public class MainActivity extends BaseActivity {
 
     public static final String CURRENT_FRAGMENT_TAG = "current_fragment";
 
-    private static final int POSITION_HUMANS = 0;
+    private static final int POSITION_EMPLOYEES = 0;
     private static final int POSITION_TASKS = 1;
     private static final int POSITION_MAP = 2;
     private static final int POSITION_ACCOUNT = 3;

@@ -1,9 +1,10 @@
 package ua.rogdan.trag.data;
 
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.maps.model.LatLng;
 
 import java.util.ArrayList;
+
+import ua.rogdan.trag.data.user.User;
 
 public class Task {
     private int id;

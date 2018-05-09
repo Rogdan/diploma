@@ -96,7 +96,7 @@ public class RoadBuilderFragment extends BaseGoogleMapFragment implements RoadBu
                     .mode(TravelMode.DRIVING)
                     .origin(myPosition.latitude + "," + myPosition.longitude)
                     .waypoints(wayPoints)
-                    //.optimizeWaypoints(true)
+                    .optimizeWaypoints(true)
                     .destination(myPosition.latitude + "," + myPosition.longitude)
                     .departureTime(now)
                     .await();
