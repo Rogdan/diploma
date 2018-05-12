@@ -11,6 +11,7 @@ import butterknife.BindView;
 import ua.rogdan.trag.R;
 import ua.rogdan.trag.core.BaseActivity;
 import ua.rogdan.trag.core.BaseFragment;
+import ua.rogdan.trag.ui.account.AccountFragment;
 import ua.rogdan.trag.ui.employees.EmployeesFragment;
 import ua.rogdan.trag.ui.map.RoadBuilderFragment;
 
@@ -62,7 +63,7 @@ public class MainActivity extends BaseActivity {
                     fragment = new RoadBuilderFragment();
                     break;
                 case POSITION_ACCOUNT:
-
+                    fragment = new AccountFragment();
                     break;
             }
 

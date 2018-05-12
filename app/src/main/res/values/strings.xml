@@ -6,6 +6,19 @@
     <string name="employees">Сотрудники</string>
     <string name="map">Карта</string>
     <string name="account">Аккаунт</string>
+    <string name="driver">Водитель</string>
+    <string name="my_data">Мои данные</string>
+    <string name="contacts_safety">Контакты, личные данные</string>
+    <string name="about_app">О приложении</string>
+    <string name="version_developer">Версия, разработчики</string>
+    <string name="settings">Настройки</string>
+    <string name="language_notifications">Язык, уведомления</string>
+    <string name="diploma_info">Разработано студентом ХНУ им. В.Н. Каразина\nФакультет компьютерных наук\nБогдан Роман\nг. Харьков, 2018 год</string>
+    <string name="all_rights_reserved">© Все права защищены</string>
+    <string name="insta_link">instagram.com/rogdan_</string>
+    <string name="insta_link_https">https://www.instagram.com/rogdan_/</string>
+    <string name="mail_link">dolgokakatel91@gmail.com</string>
+    <string name="version_format">Версия %s</string>
 
     <string name="google_maps_key">AIzaSyBgB9Pr_LI7Mowe3T8ceBXLfv7TsiguR20</string>
 </resources>

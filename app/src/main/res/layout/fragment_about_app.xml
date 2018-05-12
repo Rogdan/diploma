@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_title"/>
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:paddingStart="@dimen/pad_24"
+        android:paddingEnd="@dimen/pad_24"
+        android:layout_above="@+id/app_version_tv"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:paddingTop="@dimen/pad_12"
+            style="@style/TitleTS"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/diploma_info"
+            android:gravity="center|start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/instagram_layout"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/pad_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/instagram_icon"
+                android:layout_width="@dimen/pad_48"
+                android:layout_height="@dimen/pad_48" />
+
+            <TextView
+                style="@style/LinkTS"
+                android:autoLink="web|email"
+                android:text="@string/insta_link"
+                android:background="@drawable/text_link_selector_bg"
+                android:textColorLink="@color/blue_link"
+                android:padding="@dimen/pad_12"
+                android:layout_marginStart="@dimen/pad_4"
+                android:gravity="center|start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:alpha="0.3"
+                android:src="@drawable/external_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mail_layout"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/pad_12"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginStart="@dimen/pad_4"
+                android:src="@drawable/mail"
+                android:layout_width="@dimen/pad_48"
+                android:layout_height="@dimen/pad_48" />
+
+            <TextView
+                style="@style/LinkTS"
+                android:text="@string/mail_link"
+                android:autoLink="web|email"
+                android:background="@drawable/text_link_selector_bg"
+                android:textColorLink="@color/blue_link"
+                android:padding="@dimen/pad_12"
+                android:gravity="center|start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:alpha="0.3"
+                android:src="@drawable/external_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_toStartOf="@+id/app_version_tv"
+        android:text="@string/all_rights_reserved"
+        android:padding="@dimen/pad_12"
+        style="@style/SubtitleTS"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/app_version_tv"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:padding="@dimen/pad_12"
+        android:text="Версия 1.0 beta"
+        style="@style/SubtitleTS"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

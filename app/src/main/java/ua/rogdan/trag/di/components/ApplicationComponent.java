@@ -2,6 +2,7 @@ package ua.rogdan.trag.di.components;
 
 import dagger.Component;
 import ua.rogdan.trag.di.modules.DataModule;
+import ua.rogdan.trag.ui.account.AccountFragment;
 import ua.rogdan.trag.ui.employees.EmployeesFragment;
 import ua.rogdan.trag.ui.map.RoadBuilderFragment;
 import ua.rogdan.trag.ui.splash.SplashActivity;
@@ -12,4 +13,6 @@ public interface ApplicationComponent {
     RoadBuilderFragment.RoadBuilderComponent plus(RoadBuilderFragment.RoadBuilderModule roadBuilderModule);
 
     EmployeesFragment.EmployeesComponent plus(EmployeesFragment.EmployeesModule employeesModule);
+
+    AccountFragment.AccountComponent plus(AccountFragment.AccountModule accountModule);
 }
