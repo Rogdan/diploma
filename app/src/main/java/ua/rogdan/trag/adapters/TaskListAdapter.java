@@ -55,13 +55,18 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
         holder.distanceTV.setText(result);
 
         String timeString = SuffixFormatter.formatMinutes(task.getTravelTime(), context);
-        holder.timeTV.setText(timeString);
+        String timeFormat = context.getString(R.string.approximately_format);
+        holder.timeTV.setText(String.format(timeFormat, timeString));
 
         Date date = new Date();
         date.setTime(date.getTime() + new Random().nextInt(1000000000) + 100000);
         String finishTill = outputFormat.format(date);
         String finishTillFormat = context.getString(R.string.finish_to_format);
         holder.deadlineTV.setText(String.format(finishTillFormat, finishTill));
+
+        int taskNumber = task.getId();
+        String numberFormat = context.getString(R.string.task_number_format);
+        holder.taskNumberTV.setText(String.format(numberFormat, taskNumber));
 
         User customer = task.getCustomer();
         String customerFormat = context.getString(R.string.customer_format);
@@ -82,6 +87,8 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
         protected TextView deadlineTV;
         @BindView(R.id.customer_tv)
         protected TextView customerTV;
+        @BindView(R.id.task_number_tv)
+        protected TextView taskNumberTV;
 
         public TaskViewHolder(View itemView) {
             super(itemView);

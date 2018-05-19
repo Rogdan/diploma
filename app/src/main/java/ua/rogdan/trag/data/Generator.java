@@ -47,7 +47,7 @@ public class Generator {
         Task task = new Task();
         task.setCustomer(createUser());
         task.setExecutor(createUser());
-        task.setId(random.nextInt(1000));
+        task.setId(random.nextInt(999999) + 1);
         task.setTaskPoints(generateTaskPoints(random.nextInt(5) + 2));
 
         int km = random.nextInt(120) + 30;

@@ -49,12 +49,22 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/task_number_tv"
+        android:layout_marginTop="@dimen/pad_8"
+        android:layout_below="@+id/deadline_tv"
+        style="@style/SubtitleTS"
+        android:text="Задача #12345"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
         android:id="@+id/customer_tv"
         android:gravity="end"
         android:layout_below="@+id/deadline_tv"
         style="@style/SubtitleTS"
         android:layout_marginTop="@dimen/pad_8"
         android:text="Заказчик Богдан Роман"
+        android:layout_toEndOf="@+id/task_number_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
