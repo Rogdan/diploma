@@ -1,13 +1,11 @@
 package ua.rogdan.trag.ui.map;
 
-import android.app.FragmentManager;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.DirectionsApi;
 import com.google.maps.model.DirectionsResult;
@@ -25,7 +23,7 @@ import dagger.Module;
 import dagger.Provides;
 import dagger.Subcomponent;
 import ua.rogdan.trag.R;
-import ua.rogdan.trag.data.Task;
+import ua.rogdan.trag.data.task.Task;
 import ua.rogdan.trag.di.Injector;
 import ua.rogdan.trag.di.scope.ActivityScope;
 import ua.rogdan.trag.tools.view.BaseGoogleMapFragment;

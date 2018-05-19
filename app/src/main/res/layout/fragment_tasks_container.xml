@@ -41,4 +41,15 @@
         android:layout_below="@+id/tasks_header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/add_task_iv"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/plus"
+        android:layout_marginEnd="@dimen/pad_32"
+        android:layout_marginBottom="@dimen/pad_32"
+        android:alpha="0.8"
+        android:layout_width="@dimen/pad_55"
+        android:layout_height="@dimen/pad_55"/>
 </RelativeLayout>

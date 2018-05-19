@@ -19,10 +19,26 @@
     <string name="insta_link_https">https://www.instagram.com/rogdan_/</string>
     <string name="mail_link">dolgokakatel91@gmail.com</string>
     <string name="version_format">Версия %s</string>
+    <string name="approximately_format">Примерно %s</string>
+    <string name="finish_to_format">Закончить до %s</string>
+    <string name="km_format">%d км</string>
+    <string name="customer_format">Заказчик %s</string>
+    <string name="min">мин</string>
+    <string name="h">ч</string>
+
+    <string name="point">пункт</string>
+    <string name="point_a">пункта</string>
+    <string name="points">пунктов</string>
+
+    <array name="station_format">
+        <item>пунктов</item>
+        <item>пункт</item>
+        <item>пункта</item>
+    </array>
 
     <array name="tasks_tabs">
         <item>Активные</item>
-        <item>Архивные</item>
+        <item>Архив</item>
     </array>
 
     <string name="google_maps_key">AIzaSyBgB9Pr_LI7Mowe3T8ceBXLfv7TsiguR20</string>

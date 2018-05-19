@@ -7,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 import ua.rogdan.trag.R;
 import ua.rogdan.trag.adapters.TabSelectionListener;
 import ua.rogdan.trag.adapters.TasksPagerAdapter;
@@ -53,6 +55,12 @@ public class TasksContainerFragment extends BaseFragment {
             layoutParams.weight = title.length();
             layout.setLayoutParams(layoutParams);
         }
+    }
+
+
+    @OnClick(R.id.add_task_iv)
+    protected void addTask() {
+        Toast.makeText(getContext(), "click", Toast.LENGTH_SHORT).show();
     }
 
     @Override

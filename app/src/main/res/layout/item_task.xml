@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white_background"
+    android:layout_marginStart="@dimen/pad_10"
+    android:layout_marginEnd="@dimen/pad_10"
+    android:paddingStart="@dimen/pad_20"
+    android:paddingEnd="@dimen/pad_20"
+    android:paddingTop="@dimen/pad_12"
+    android:paddingBottom="@dimen/pad_12"
+    android:layout_marginBottom="@dimen/pad_6">
+
+    <TextView
+        android:id="@+id/distance_tv"
+        android:layout_toStartOf="@+id/arrow_right"
+        android:drawableStart="@drawable/map_pin"
+        android:drawablePadding="@dimen/pad_10"
+        android:gravity="center|start"
+        android:text="75 км, 7 пунктов"
+        style="@style/TitleTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_toStartOf="@+id/arrow_right"
+        android:layout_below="@+id/distance_tv"
+        android:drawablePadding="@dimen/pad_10"
+        android:drawableStart="@drawable/clock"
+        style="@style/TitleTS"
+        android:text="Примерно 1ч 45 мин"
+        android:gravity="center|start"
+        android:layout_marginTop="@dimen/pad_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/deadline_tv"
+        android:layout_toStartOf="@+id/arrow_right"
+        android:text="Сдать до 17.05 18:30"
+        style="@style/TitleTS"
+        android:layout_below="@+id/time_tv"
+        android:drawablePadding="@dimen/pad_10"
+        android:drawableStart="@drawable/calendar"
+        android:layout_marginTop="@dimen/pad_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/customer_tv"
+        android:gravity="end"
+        android:layout_below="@+id/deadline_tv"
+        style="@style/SubtitleTS"
+        android:layout_marginTop="@dimen/pad_8"
+        android:text="Заказчик Богдан Роман"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:src="@drawable/arrow_right"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

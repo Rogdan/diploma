@@ -1,4 +1,4 @@
-package ua.rogdan.trag.data;
+package ua.rogdan.trag.data.task;
 
 
 import com.google.android.gms.maps.model.LatLng;

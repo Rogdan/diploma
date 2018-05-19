@@ -1,4 +1,4 @@
-package ua.rogdan.trag.data;
+package ua.rogdan.trag.data.task;
 
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -9,6 +9,8 @@ import ua.rogdan.trag.data.user.User;
 public class Task {
     private int id;
     private ArrayList<TaskPoint> taskPoints;
+    private int travelTime;
+    private int travelKM;
     private User executor;
     private User customer;
 
@@ -53,6 +55,22 @@ public class Task {
         wayPoints.replace(wayPoints.length() - 1 , wayPoints.length(), "");
 
         return wayPoints.toString();
+    }
+
+    public int getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTimeMinutes(int travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public int getTravelKM() {
+        return travelKM;
+    }
+
+    public void setTravelKM(int travelKM) {
+        this.travelKM = travelKM;
     }
 
     public ArrayList<MarkerOptions> parseToMarkers() {

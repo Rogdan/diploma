@@ -1,4 +1,4 @@
-package ua.rogdan.trag.data;
+package ua.rogdan.trag.data.task;
 
 public class Goods {
     private int id;

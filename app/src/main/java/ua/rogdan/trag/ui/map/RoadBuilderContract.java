@@ -1,7 +1,7 @@
 package ua.rogdan.trag.ui.map;
 
 import ua.rogdan.trag.core.IBaseView;
-import ua.rogdan.trag.data.Task;
+import ua.rogdan.trag.data.task.Task;
 
 public interface RoadBuilderContract {
     interface IRoadBuilderView extends IBaseView {
