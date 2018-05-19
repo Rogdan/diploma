@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import ua.rogdan.trag.ui.account.AccountFragment;
 import ua.rogdan.trag.ui.account.about_app.AboutAppFragment;
+import ua.rogdan.trag.ui.tasks.active.ActiveTasksFragment;
+import ua.rogdan.trag.ui.tasks.archive.ArchiveTasksFragment;
 
 public class TasksPagerAdapter extends FragmentStatePagerAdapter {
     private String[] titles;
@@ -20,10 +22,10 @@ public class TasksPagerAdapter extends FragmentStatePagerAdapter {
         Fragment result = null;
         switch (position) {
             case ACTIVE_TASKS_POSITION:
-                result = new AccountFragment();
+                result = new ActiveTasksFragment();
                 break;
             case ARCHIVE_TASKS_POSITION:
-                result = new AboutAppFragment();
+                result = new ArchiveTasksFragment();
                 break;
         }
 

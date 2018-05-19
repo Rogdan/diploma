@@ -16,9 +16,8 @@ public class EmployeesPresenter extends Presenter<EmployeesContract.IEmployeesVi
         view().showProgress();
 
         new Handler()
-                .postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
+                .postDelayed(() -> {
+                    if (!isUnbinded() && view().isActive()) {
                         ArrayList<User> employees = new ArrayList<>();
                         for (int i = 0; i < 10; i++) {
                             User user = createUser();

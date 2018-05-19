@@ -67,4 +67,7 @@ public abstract class Presenter<V> {
         subscriptionsToUnbind.clear();
     }
 
+    public boolean isUnbinded() {
+        return view == null;
+    }
 }

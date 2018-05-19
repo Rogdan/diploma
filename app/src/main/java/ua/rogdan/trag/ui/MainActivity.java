@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        selectTab(POSITION_EMPLOYEES, false);
+        selectTab(POSITION_TASKS, false);
     }
 
     private void selectTab(int position, boolean wasSelected) {
@@ -54,11 +54,11 @@ public class MainActivity extends BaseActivity {
             BaseFragment fragment = null;
 
             switch (position) {
-                case POSITION_EMPLOYEES:
-                    fragment = new EmployeesFragment();
-                    break;
                 case POSITION_TASKS:
                     fragment = new TasksContainerFragment();
+                    break;
+                case POSITION_EMPLOYEES:
+                    fragment = new EmployeesFragment();
                     break;
                 case POSITION_MAP:
                     fragment = new RoadBuilderFragment();
@@ -88,8 +88,8 @@ public class MainActivity extends BaseActivity {
 
     public static final String CURRENT_FRAGMENT_TAG = "current_fragment";
 
-    private static final int POSITION_EMPLOYEES = 0;
-    private static final int POSITION_TASKS = 1;
+    private static final int POSITION_TASKS = 0;
+    private static final int POSITION_EMPLOYEES = 1;
     private static final int POSITION_MAP = 2;
     private static final int POSITION_ACCOUNT = 3;
 }
