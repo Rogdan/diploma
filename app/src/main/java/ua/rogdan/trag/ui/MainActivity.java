@@ -14,6 +14,7 @@ import ua.rogdan.trag.core.BaseFragment;
 import ua.rogdan.trag.ui.account.AccountFragment;
 import ua.rogdan.trag.ui.employees.EmployeesFragment;
 import ua.rogdan.trag.ui.map.RoadBuilderFragment;
+import ua.rogdan.trag.ui.tasks.TasksContainerFragment;
 
 public class MainActivity extends BaseActivity {
     @BindView(R.id.bottom_navigation)
@@ -57,7 +58,7 @@ public class MainActivity extends BaseActivity {
                     fragment = new EmployeesFragment();
                     break;
                 case POSITION_TASKS:
-
+                    fragment = new TasksContainerFragment();
                     break;
                 case POSITION_MAP:
                     fragment = new RoadBuilderFragment();

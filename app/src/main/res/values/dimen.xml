@@ -3,5 +3,6 @@
     <dimen name="pad_4">4dp</dimen>
     <dimen name="pad_12">12dp</dimen>
     <dimen name="pad_24">24dp</dimen>
+    <dimen name="pad_30">30dp</dimen>
     <dimen name="pad_48">48dp</dimen>
 </resources>

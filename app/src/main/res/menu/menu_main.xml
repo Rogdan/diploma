@@ -8,7 +8,7 @@
     <item
         android:id="@+id/tasks"
         android:icon="@drawable/tasks"
-        android:title="@string/tasks"/>
+        android:title="@string/my_tasks"/>
 
     <item
         android:id="@+id/map"

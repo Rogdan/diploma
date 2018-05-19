@@ -36,4 +36,18 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">italic|bold</item>
     </style>
+
+    <style name="White28">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MediumWhiteCenter18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
 </resources>

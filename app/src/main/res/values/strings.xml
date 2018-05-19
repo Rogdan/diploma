@@ -2,7 +2,7 @@
     <string name="app_name">TraG</string>
     
     //Main menu
-    <string name="tasks">Задачи</string>
+    <string name="my_tasks">Мои задачи</string>
     <string name="employees">Сотрудники</string>
     <string name="map">Карта</string>
     <string name="account">Аккаунт</string>
@@ -19,6 +19,11 @@
     <string name="insta_link_https">https://www.instagram.com/rogdan_/</string>
     <string name="mail_link">dolgokakatel91@gmail.com</string>
     <string name="version_format">Версия %s</string>
+
+    <array name="tasks_tabs">
+        <item>Активные</item>
+        <item>Архивные</item>
+    </array>
 
     <string name="google_maps_key">AIzaSyBgB9Pr_LI7Mowe3T8ceBXLfv7TsiguR20</string>
 </resources>
