@@ -302,7 +302,7 @@ public abstract class BaseGoogleMapFragment extends BaseFragment {
         super.onDestroyView();
     }
 
-    protected GeoApiContext getGeoApiContext() {
+    public GeoApiContext getGeoApiContext() {
         GeoApiContext geoApiContext = new GeoApiContext();
         return geoApiContext.setQueryRateLimit(3)
                 .setApiKey(getString(R.string.google_maps_key))

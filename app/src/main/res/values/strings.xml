@@ -22,10 +22,13 @@
     <string name="approximately_format">Примерно %s</string>
     <string name="finish_to_format">Закончить до %s</string>
     <string name="task_number_format">Задача #%d</string>
+    <string name="number_format">#%d</string>
     <string name="km_format">%d км</string>
     <string name="customer_format">Заказчик %s</string>
     <string name="min">мин</string>
     <string name="h">ч</string>
+    <string name="choose_task">Выберите задачу</string>
+    <string name="start">Начать</string>
 
     <string name="point">пункт</string>
     <string name="point_a">пункта</string>

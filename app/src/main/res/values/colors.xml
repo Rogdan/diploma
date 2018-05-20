@@ -5,6 +5,7 @@
     <color name="colorAccent">#000000</color>
 
     <color name="charcoal_alpha">#96262a29</color>
+    <color name="gunmetal_alpha">#96515554</color>
     <color name="dark_mint_green">#1ac270</color>
     <color name="dark_mint_green_75">#961ac270</color>
 
@@ -12,6 +13,7 @@
     <color name="charcoal">#262a29</color>
     <color name="white">#fff</color>
     <color name="black">#000000</color>
+    <color name="black_alpha_70">#b2000000</color>
     <color name="grey_alpha_75">#c0919191</color>
     <color name="dark_seafoam">#1bbf81</color>
     <color name="seaweed">#1fe76e</color>

@@ -18,6 +18,7 @@ import dagger.Module;
 import dagger.Provides;
 import dagger.Subcomponent;
 import ua.rogdan.trag.R;
+import ua.rogdan.trag.adapters.ItemClickListener;
 import ua.rogdan.trag.adapters.TaskListAdapter;
 import ua.rogdan.trag.core.BaseFragment;
 import ua.rogdan.trag.data.task.Task;
@@ -26,6 +27,7 @@ import ua.rogdan.trag.di.scope.ActivityScope;
 
 public class ActiveTasksFragment extends BaseFragment implements ActiveTasksContract.IActiveTasksView{
     private TaskListAdapter adapter;
+    private ItemClickListener<Task> clickListener;
 
     @Inject
     protected ActiveTasksPresenter presenter;
@@ -45,6 +47,18 @@ public class ActiveTasksFragment extends BaseFragment implements ActiveTasksCont
         adapter = new TaskListAdapter(getContext());
         tasksRV.setLayoutManager(new LinearLayoutManager(getContext()));
         tasksRV.setAdapter(adapter);
+
+        adapter.setClickListener((task, position) -> {
+            if (clickListener == null) {
+                Toast.makeText(getContext(), "Click", Toast.LENGTH_SHORT).show();
+            } else {
+                clickListener.onItemSelected(task, position);
+            }
+        });
+    }
+
+    public void setClickListener(ItemClickListener<Task> clickListener) {
+        this.clickListener = clickListener;
     }
 
     @Override

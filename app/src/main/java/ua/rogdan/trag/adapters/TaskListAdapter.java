@@ -26,6 +26,7 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
     private List<Task> taskList;
     private Context context;
     private SimpleDateFormat outputFormat;
+    private ItemClickListener<Task> clickListener;
 
     public TaskListAdapter(Context context) {
         this.taskList = new ArrayList<>();
@@ -36,6 +37,10 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
     public void setItems(List<Task> taskList) {
         this.taskList = taskList;
         notifyDataSetChanged();
+    }
+
+    public void setClickListener(ItemClickListener<Task> clickListener) {
+        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -71,6 +76,14 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
         User customer = task.getCustomer();
         String customerFormat = context.getString(R.string.customer_format);
         holder.customerTV.setText(String.format(customerFormat, customer.getName()));
+
+        holder.itemView.setOnClickListener(view -> {
+            if (clickListener != null) {
+                int pos = holder.getAdapterPosition();
+                Task item = taskList.get(pos);
+                clickListener.onItemSelected(item, pos);
+            }
+        });
     }
 
     @Override

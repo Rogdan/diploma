@@ -5,8 +5,10 @@
     <dimen name="pad_8">8dp</dimen>
     <dimen name="pad_10">10dp</dimen>
     <dimen name="pad_12">12dp</dimen>
+    <dimen name="pad_18">18dp</dimen>
     <dimen name="pad_20">20dp</dimen>
     <dimen name="pad_24">24dp</dimen>
+    <dimen name="pad_28">28dp</dimen>
     <dimen name="pad_30">30dp</dimen>
     <dimen name="pad_32">32dp</dimen>
     <dimen name="pad_48">48dp</dimen>
