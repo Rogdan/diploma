@@ -1,5 +1,7 @@
 package ua.rogdan.trag.ui.map;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -68,7 +70,10 @@ public class RoadBuilderFragment extends BaseGoogleMapFragment implements RoadBu
 
     @OnClick(R.id.go_tv)
     protected void startRoad() {
-        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
+        Uri gmmIntentUri = Uri.parse(presenter.getMapUri(lastSelectedTask, myPosition));
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
     }
 
     @Override
