@@ -29,7 +29,7 @@
     <string name="h">ч</string>
     <string name="choose_task">Выберите задачу</string>
     <string name="start">Начать</string>
-    <string name="customer_wish">Пожелание клиента</string>
+    <string name="customer_comment">Комментарий клиента</string>
     <string name="app_language">Язык приложения</string>
     <string name="russian">Русский</string>
     <string name="ukrainian">Украинский</string>
