@@ -2,6 +2,7 @@ package ua.rogdan.trag.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ import ua.rogdan.trag.data.task.Task;
 import ua.rogdan.trag.data.user.User;
 import ua.rogdan.trag.tools.SuffixFormatter;
 
-public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskViewHolder>{
+public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskViewHolder> {
     private List<Task> taskList;
     private Context context;
     private SimpleDateFormat outputFormat;
@@ -59,15 +60,31 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
         String result = km + ", " + stations;
         holder.distanceTV.setText(result);
 
-        String timeString = SuffixFormatter.formatMinutes(task.getTravelTime(), context);
-        String timeFormat = context.getString(R.string.approximately_format);
-        holder.timeTV.setText(String.format(timeFormat, timeString));
+        switch (task.getTaskState()) {
+            case Task.STATE_FAILED:
+                holder.timeTV.setCompoundDrawablesWithIntrinsicBounds(context.getDrawable(R.drawable.cancel), null, null, null);
+                holder.timeTV.setText(R.string.failed_pick_manager);
+                holder.timeTV.setTextColor(ContextCompat.getColor(context, R.color.red));
+                holder.deadlineTV.setVisibility(View.GONE);
+                break;
+            case Task.STATE_FINISHED:
+                holder.timeTV.setCompoundDrawablesWithIntrinsicBounds(context.getDrawable(R.drawable.ok), null, null, null);
+                holder.timeTV.setText(R.string.finished_success);
+                holder.timeTV.setTextColor(ContextCompat.getColor(context, R.color.green_teal));
+                holder.deadlineTV.setVisibility(View.GONE);
+                break;
+            case Task.STATE_NOT_STARTED:
+                String timeString = SuffixFormatter.formatMinutes(task.getTravelTime(), context);
+                String timeFormat = context.getString(R.string.approximately_format);
+                holder.timeTV.setText(String.format(timeFormat, timeString));
 
-        Date date = new Date();
-        date.setTime(date.getTime() + new Random().nextInt(1000000000) + 100000);
-        String finishTill = outputFormat.format(date);
-        String finishTillFormat = context.getString(R.string.finish_to_format);
-        holder.deadlineTV.setText(String.format(finishTillFormat, finishTill));
+                Date date = new Date();
+                date.setTime(date.getTime() + new Random().nextInt(1000000000) + 100000);
+                String finishTill = outputFormat.format(date);
+                String finishTillFormat = context.getString(R.string.finish_to_format);
+                holder.deadlineTV.setText(String.format(finishTillFormat, finishTill));
+                break;
+        }
 
         int taskNumber = task.getId();
         String numberFormat = context.getString(R.string.task_number_format);

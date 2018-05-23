@@ -34,16 +34,16 @@ public class Generator {
         return result;
     }
 
-    public static ArrayList<Task> createTaskList(int amount) {
+    public static ArrayList<Task> createTaskList(int amount, boolean isActive) {
         ArrayList<Task> result = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            result.add(createTask());
+            result.add(createTask(isActive));
         }
 
         return result;
     }
 
-    public static Task createTask() {
+    public static Task createTask(boolean isActive) {
         Task task = new Task();
         task.setCustomer(createUser());
         task.setExecutor(createUser());
@@ -53,6 +53,16 @@ public class Generator {
         int km = random.nextInt(120) + 30;
         task.setTravelKM(km);
         task.setTravelTimeMinutes((int) (km * 1.4));
+        if (isActive) {
+            task.setTaskState(Task.STATE_NOT_STARTED);
+        } else {
+            int chance = random.nextInt(100);
+            if (chance < 15) {
+                task.setTaskState(Task.STATE_FAILED);
+            } else {
+                task.setTaskState(Task.STATE_FINISHED);
+            }
+        }
 
         return task;
     }

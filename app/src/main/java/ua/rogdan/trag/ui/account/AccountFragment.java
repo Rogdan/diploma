@@ -2,7 +2,6 @@ package ua.rogdan.trag.ui.account;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -21,6 +20,8 @@ import ua.rogdan.trag.core.BaseFragment;
 import ua.rogdan.trag.di.Injector;
 import ua.rogdan.trag.di.scope.ActivityScope;
 import ua.rogdan.trag.ui.account.about_app.AboutAppActivity;
+import ua.rogdan.trag.ui.account.my_data.MyDataActivity;
+import ua.rogdan.trag.ui.account.settings.SettingsActivity;
 
 public class AccountFragment extends BaseFragment implements AccountContract.IAccountView {
     @Inject
@@ -56,14 +57,16 @@ public class AccountFragment extends BaseFragment implements AccountContract.IAc
     public void gotoMenuItem(View item) {
         switch (item.getId()) {
             case R.id.my_data_layout:
-
+                Intent myData = new Intent(getActivity(), MyDataActivity.class);
+                startActivity(myData);
                 break;
             case R.id.settings_layout:
-
+                Intent settings = new Intent(getActivity(), SettingsActivity.class);
+                startActivity(settings);
                 break;
             case  R.id.about_app_layout:
-                Intent intent = new Intent(getActivity(), AboutAppActivity.class);
-                startActivity(intent);
+                Intent aboutApp = new Intent(getActivity(), AboutAppActivity.class);
+                startActivity(aboutApp);
                 break;
         }
     }

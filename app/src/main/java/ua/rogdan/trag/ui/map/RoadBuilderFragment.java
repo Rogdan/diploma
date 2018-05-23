@@ -11,7 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.DirectionsApi;
 import com.google.maps.GeoApiContext;
@@ -139,7 +142,21 @@ public class RoadBuilderFragment extends BaseGoogleMapFragment implements RoadBu
 
     @Override
     protected void onMapReady() {
+        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
 
+            @Override
+            public View getInfoContents(Marker marker) {
+                View myContentView = getLayoutInflater().inflate(R.layout.item_snippet, null);
+                TextView tvWishes = myContentView.findViewById(R.id.description_tv);
+                tvWishes.setText(marker.getTitle());
+
+                return myContentView;
+            }
+        });
     }
 
     @Override
@@ -197,7 +214,7 @@ public class RoadBuilderFragment extends BaseGoogleMapFragment implements RoadBu
 
     @Override
     public void onLoadingError() {
-        Toast.makeText(getContext(), "Something went wrong!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Что-то пошло не так", Toast.LENGTH_SHORT).show();
     }
 
     @Subcomponent(modules = RoadBuilderModule.class)

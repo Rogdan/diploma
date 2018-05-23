@@ -6,8 +6,13 @@
 
     <color name="charcoal_alpha">#96262a29</color>
     <color name="gunmetal_alpha">#96515554</color>
+    <color name="pinkish_grey">#cccccc</color>
     <color name="dark_mint_green">#1ac270</color>
     <color name="dark_mint_green_75">#961ac270</color>
+    <color name="pale_grey_four">#e8e8ed</color>
+    <color name="grey">#6c6c6c</color>
+    <color name="shamrock_green">#00bd5f</color>
+    <color name="red">#f24d4d</color>
 
     <color name="gunmetal">#515554</color>
     <color name="charcoal">#262a29</color>

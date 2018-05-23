@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/pad_10"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/customer_wish_tv"
+        android:text="@string/customer_wish"
+        style="@style/TitleTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/pad_4"
+        android:layout_below="@+id/customer_wish_tv"
+        style="@style/SubtitleTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

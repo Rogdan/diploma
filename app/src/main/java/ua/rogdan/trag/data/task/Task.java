@@ -13,6 +13,7 @@ public class Task {
     private int travelKM;
     private User executor;
     private User customer;
+    private int taskState;
 
     public int getId() {
         return id;
@@ -73,6 +74,18 @@ public class Task {
         this.travelKM = travelKM;
     }
 
+    public void setTravelTime(int travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public int getTaskState() {
+        return taskState;
+    }
+
+    public void setTaskState(int taskState) {
+        this.taskState = taskState;
+    }
+
     public ArrayList<MarkerOptions> parseToMarkers() {
         ArrayList<MarkerOptions> markerOptionsList = new ArrayList<>();
         for (TaskPoint taskPoint : taskPoints) {
@@ -84,4 +97,8 @@ public class Task {
         }
         return markerOptionsList;
     }
+
+    public static final int STATE_FINISHED = 0;
+    public static final int STATE_NOT_STARTED = 1;
+    public static final int STATE_FAILED = 2;
 }

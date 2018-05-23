@@ -29,6 +29,26 @@
     <string name="h">ч</string>
     <string name="choose_task">Выберите задачу</string>
     <string name="start">Начать</string>
+    <string name="customer_wish">Пожелание клиента</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="russian">Русский</string>
+    <string name="ukrainian">Украинский</string>
+    <string name="receive_notifications">Получать уведомления</string>
+    <string name="new_tasks">Новые задачи</string>
+    <string name="terms_of_use">Условия использования</string>
+    <string name="tasks_update">Обновление задач</string>
+    <string name="you_cant_edit_phone">Нельзя изменить номер телефона</string>
+    <string name="my_name">Мое имя</string>
+    <string name="email">Електронный адрес</string>
+    <string name="phone_for_authorisation_and_connection">Телефон для авторизации и связи</string>
+    <string name="for_callback_with_us">Для обратной связи с вами</string>
+    <string name="cancel_access_for_all">Отменить всем доступ</string>
+    <string name="enter_your_name">Укажите свое имя</string>
+    <string name="add_email">Добавьте электронный адрес</string>
+    <string name="are_you_grateful_that_someone_got_away_your_account">Подозреваете, что кто-то завладел вашим аккаунтом?</string>
+    <string name="all_sessions_closed">Все сессии закрыты</string>
+    <string name="failed_pick_manager">Просрочено. Менеджер свяжеться с вами</string>
+    <string name="finished_success">Выполнено успешно</string>
 
     <string name="point">пункт</string>
     <string name="point_a">пункта</string>

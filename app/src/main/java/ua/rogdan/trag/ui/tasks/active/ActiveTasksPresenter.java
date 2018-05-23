@@ -13,7 +13,7 @@ public class ActiveTasksPresenter extends Presenter<ActiveTasksContract.IActiveT
         new Handler()
                 .postDelayed(() -> {
                     if (!isUnbinded() && view().isActive()) {
-                        view().onTaskListLoaded(Generator.createTaskList(14));
+                        view().onTaskListLoaded(Generator.createTaskList(14, true));
                         view().hideProgress();
                     }
                 }, 1000);

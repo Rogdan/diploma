@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title_view"
+        layout="@layout/item_title"/>
+
+    <LinearLayout
+        android:id="@+id/screen_content_layout"
+        android:layout_below="@+id/title_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/app_language_tv"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/app_language"
+            style="@style/Black16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/russian_radio"
+                android:layout_weight="1"
+                android:text="@string/russian"
+                android:checked="true"
+                style="@style/SwitcherStyle"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/ukrainian_radio"
+                android:layout_weight="1"
+                style="@style/SwitcherStyle"
+                android:text="@string/ukrainian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/receive_message_tv"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/receive_notifications"
+            style="@style/Black24"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/talons_switcher"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            style="@style/Black16"
+            android:layout_marginTop="30dp"
+            android:text="@string/new_tasks"
+            android:theme="@style/SwitcherTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            style="@style/DividerStyle"/>
+
+        <Switch
+            android:id="@+id/partners_switcher"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:theme="@style/SwitcherTheme"
+            style="@style/Black16"
+            android:text="@string/tasks_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Black16"
+        android:id="@+id/use_terms_tv"
+        android:text="@string/terms_of_use"
+        android:gravity="start|center"
+        android:paddingStart="30dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/pale_grey"
+        android:drawableEnd="@drawable/arrow_right"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/top_snack_coordinator"
+        android:layout_below="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleLarge"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true">
+
+    <include
+        layout="@layout/item_title"
+        android:id="@+id/title_view"/>
+
+    <LinearLayout
+        android:id="@+id/screen_content_layout"
+        android:layout_below="@+id/title_view"
+        android:layout_above="@+id/safety_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/my_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/phone_number_tv"
+                    style="@style/Black16"
+                    android:enabled="false"
+                    android:text="+380 50 088 88 88"
+                    android:background="@color/white"
+                    android:alpha="0.9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:alpha="0.7"
+                    android:text="@string/phone_for_authorisation_and_connection"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/DividerStyle"/>
+
+        <TextView
+            android:id="@+id/enter_your_name_tv"
+            android:visibility="gone"
+            android:text="@string/enter_your_name"
+            style="@style/GreenTeal16sp"
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/edit_my_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_toStartOf="@+id/edit_name_iv"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/my_name"
+                    style="@style/Black16"
+                    android:alpha="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/my_name_tv"
+                    android:text="Богдан Роман"
+                    style="@style/MediumBlack16"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/edit_name_iv"
+                android:src="@drawable/change"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View style="@style/DividerStyle"/>
+
+        <TextView
+            android:id="@+id/enter_mail_tv"
+            android:text="@string/add_email"
+            android:visibility="gone"
+            style="@style/GreenTeal16sp"
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/edit_email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_toStartOf="@+id/edit_mail_iv"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/email"
+                    style="@style/Black16"
+                    android:alpha="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:text="dip_lom123@gmail.com"
+                    style="@style/MediumBlack16"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/edit_mail_iv"
+                android:src="@drawable/change"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/safety_layout"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="30dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pale_grey">
+
+        <TextView
+            style="@style/Black16"
+            android:textColor="@color/black"
+            android:text="@string/are_you_grateful_that_someone_got_away_your_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cancel_for_all_tv"
+            style="@style/MediumGreenRight14"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="start"
+            android:text="@string/cancel_access_for_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/top_snack_coordinator"
+        android:layout_below="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleLarge"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
